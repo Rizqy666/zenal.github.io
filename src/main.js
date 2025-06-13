@@ -76,6 +76,7 @@ const translations = {
     heroDescription:
       "Experienced in providing robust technical assistance, system maintenance, and developing efficient backend applications with Laravel.",
     heroButton: "View My Experience",
+    heroCVButton: "Review My CV",
     // bagian about
     aboutTitle: "About Me",
     // deskripsi about
@@ -163,6 +164,7 @@ const translations = {
     heroDescription:
       "Berpengalaman dalam memberikan bantuan teknis yang kuat, pemeliharaan sistem, dan mengembangkan aplikasi backend yang efisien dengan Laravel.",
     heroButton: "Lihat Pengalaman Saya",
+    heroCVButton: "Lihat CV Saya",
 
     // About Section
     aboutTitle: "Tentang Saya",
