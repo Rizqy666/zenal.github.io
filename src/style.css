@@ -1,3 +1,4 @@
+/* Ensure proper contrast ratios for accessibility */
 :root {
   --primary-bg: #0a0a0a;
   --secondary-text: #f5f5f5;
@@ -5,7 +6,7 @@
   --card-bg: rgba(255, 255, 255, 0.03);
   --card-border: rgba(255, 255, 255, 0.1);
   --input-border: rgba(255, 255, 255, 0.2);
-  --label-color: rgba(255, 255, 255, 0.5);
+  --label-color: rgba(255, 255, 255, 0.6);
   --nav-bg: rgba(10, 10, 10, 0.85);
   --skill-bg: rgba(255, 255, 255, 0.1);
   --gap: clamp(1rem, 2vw, 2.5rem);
@@ -18,7 +19,7 @@ body.dark-mode {
   --card-bg: rgba(0, 0, 0, 0.03);
   --card-border: rgba(0, 0, 0, 0.1);
   --input-border: rgba(0, 0, 0, 0.2);
-  --label-color: rgba(0, 0, 0, 0.5);
+  --label-color: rgba(0, 0, 0, 0.6);
   --nav-bg: rgba(240, 240, 240, 0.85);
   --skill-bg: rgba(0, 0, 0, 0.05);
 }
@@ -31,7 +32,13 @@ body.dark-mode {
 
 html {
   scroll-behavior: smooth;
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  overflow-y: scroll;
+  scroll-padding-top: var(--nav-height);
 }
 
 body {
@@ -39,7 +46,9 @@ body {
   color: var(--secondary-text);
   overflow-x: hidden;
   min-height: 100vh;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
 }
 
 ::selection {
@@ -201,7 +210,10 @@ nav {
   cursor: pointer;
   font-size: 0.8rem;
   border-radius: 4px;
-  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .lang-switcher button:hover,
@@ -467,7 +479,9 @@ nav {
   background: var(--skill-bg);
   border-radius: 5px;
   font-size: 0.9rem;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
   display: inline-flex;
   align-items: center;
 }
@@ -602,7 +616,10 @@ footer {
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  transition: transform 0.1s ease, width 0.2s ease, height 0.2s ease,
+  transition:
+    transform 0.1s ease,
+    width 0.2s ease,
+    height 0.2s ease,
     opacity 0.2s ease;
 }
 
@@ -615,7 +632,10 @@ footer {
   pointer-events: none;
   z-index: 9998;
   transform: translate(-50%, -50%);
-  transition: transform 0.25s ease-out, width 0.3s ease, height 0.3s ease,
+  transition:
+    transform 0.25s ease-out,
+    width 0.3s ease,
+    height 0.3s ease,
     opacity 0.3s ease;
 }
 
@@ -677,5 +697,282 @@ body.dark-mode .cursor-follower {
 
   .nav-brand {
     font-size: 1.1rem;
+  }
+}
+
+/* Form validation styles */
+.input-group {
+  margin-bottom: 0.5rem;
+}
+
+.error-message {
+  display: block;
+  color: #ff4444;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+  min-height: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.error-message.show {
+  opacity: 1;
+}
+
+.input-group input.error,
+.input-group textarea.error {
+  border-bottom-color: #ff4444;
+}
+
+/* Success modal styles */
+.success-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.success-modal.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.success-modal-content {
+  background: var(--card-bg);
+  border: 2px solid var(--accent-color);
+  padding: 2.5rem;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.success-modal.show .success-modal-content {
+  transform: scale(1);
+}
+
+.success-modal-content .success-icon {
+  font-size: 4rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.success-modal-content h3 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.success-modal-content p {
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.success-modal-content .btn {
+  margin: 0 auto;
+  cursor: pointer;
+  background: transparent;
+}
+
+/* Contact form button styling */
+.contact-form .btn {
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  background: transparent;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.contact-form .btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Active navigation link */
+.nav-link.active {
+  color: var(--accent-color);
+}
+
+.nav-link.active span {
+  color: var(--accent-color);
+}
+
+.nav-link.active::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent-color);
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 6px;
+  border: 2px solid var(--primary-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+  opacity: 0.8;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) transparent;
+}
+
+/* Smooth transition for scrollbar when theme changes */
+::-webkit-scrollbar-thumb {
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Performance optimizations */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reduce repaints and reflows */
+.cursor,
+.cursor-follower {
+  will-change: transform;
+  contain: layout style paint;
+}
+
+/* GPU acceleration for animations */
+.contribution-card,
+.nav-link,
+.btn,
+.skill {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Optimize font loading */
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+}
+
+/* Reduce layout shifts */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Optimize animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Content visibility for off-screen content */
+section:not(#hero) {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}
+
+/* Skip to main content link for accessibility */
+.skip-to-main {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--accent-color);
+  color: var(--primary-bg);
+  padding: 8px 16px;
+  text-decoration: none;
+  z-index: 10001;
+  font-weight: bold;
+}
+
+.skip-to-main:focus {
+  top: 0;
+}
+
+/* Improve focus visibility for keyboard navigation */
+*:focus-visible {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Ensure minimum touch target size (44x44px) */
+button,
+a,
+input,
+textarea,
+.nav-link,
+.btn,
+.social-link {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Exception for inline text links */
+p a,
+span a {
+  min-height: auto;
+  min-width: auto;
+  display: inline;
+}
+
+/* Improve text readability */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Ensure proper line height for readability */
+p,
+li,
+label {
+  line-height: 1.6;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --card-border: rgba(255, 255, 255, 0.3);
+    --input-border: rgba(255, 255, 255, 0.4);
+  }
+
+  body.dark-mode {
+    --card-border: rgba(0, 0, 0, 0.3);
+    --input-border: rgba(0, 0, 0, 0.4);
   }
 }

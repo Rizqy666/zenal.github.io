@@ -1,222 +1,608 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-lang-key="pageTitle">
-    Portofolio - Zaenal Nurrizqy - IT Support
-  </title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css" />
-  <link rel="stylesheet" href="src/style.css" />
-</head>
+    <!-- Performance hints -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
 
-<body>
-  <div class="cursor"></div>
-  <div class="cursor-follower"></div>
+    <!-- Primary Meta Tags -->
+    <title data-lang-key="pageTitle">
+      Zaenal Nurrizqy - IT Support Specialist | Technical Support & System
+      Administrator
+    </title>
+    <meta
+      name="title"
+      content="Zaenal Nurrizqy - IT Support Specialist | Technical Support & System Administrator"
+    />
+    <meta
+      name="description"
+      content="Professional IT Support Specialist with expertise in technical troubleshooting, system administration, network support, and backend development. Experienced in Windows Server, MySQL, Laravel, and FiveM game development."
+    />
+    <meta
+      name="keywords"
+      content="IT Support, Technical Support, System Administrator, Help Desk, Network Troubleshooting, Windows Server, MySQL Administration, Laravel Developer, FiveM Developer, IT Support Indonesia, Technical Support Specialist, Server Monitoring, Hardware Support, Software Support"
+    />
+    <meta name="author" content="Zaenal Nurrizqy" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Indonesian" />
 
-  <nav>
-    <a href="#hero" class="nav-brand">Rizqy<span>();</span></a>
-    <button id="mobile-menu-button" aria-label="Toggle Menu" aria-expanded="false">
-      <i class="fas fa-bars"></i>
-    </button>
-    <div class="nav-right-controls" id="nav-menu-items">
-      <div class="nav-links">
-        <a href="#hero" class="nav-link" data-lang-key="navHome" data-text-en="HOME"
-          data-text-id="BERANDA"><span></span></a>
-        <a href="#about" class="nav-link" data-lang-key="navAbout" data-text-en="ABOUT"
-          data-text-id="TENTANG"><span></span></a>
-        <a href="#contributions" class="nav-link" data-lang-key="navExperience" data-text-en="EXPERIENCE"
-          data-text-id="PENGALAMAN"><span></span></a>
-        <a href="#contact" class="nav-link" data-lang-key="navContact" data-text-en="CONTACT"
-          data-text-id="KONTAK"><span></span></a>
-      </div>
-      <div class="lang-switcher">
-        <button id="lang-en" title="Switch to English">EN</button>
-        <button id="lang-id" class="active" title="Ganti ke Bahasa Indonesia">
-          ID
-        </button>
-      </div>
-      <div class="theme-switcher">
-        <button id="theme-toggle" title="Toggle Dark/Light Mode">🌙</button>
-      </div>
-    </div>
-  </nav>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourwebsite.com/" />
+    <meta
+      property="og:title"
+      content="Zaenal Nurrizqy - IT Support Specialist | Technical Support & System Administrator"
+    />
+    <meta
+      property="og:description"
+      content="Professional IT Support Specialist with expertise in technical troubleshooting, system administration, network support, and backend development."
+    />
+    <meta
+      property="og:image"
+      content="https://yourwebsite.com/src/img/Image 2025-05-28 at 15.40.21_dce3a2e8.jpg"
+    />
 
-  <section id="hero" class="hero container">
-    <div class="hero-content">
-      <p class="subtitle">
-        <span data-lang-key="heroGreetingPart1"></span>
-        <span style="color: var(--accent-color); font-weight: bold">Zaenal Nurrizqy</span>
-        <span data-lang-key="heroGreetingPart2"></span>
-      </p>
-      <div class="typing-container">
-        <span id="typing-effect"></span><span class="typing-cursor"></span>
-      </div>
-      <h1>
-        <span data-lang-key="heroTitle1"></span>
-        <span style="color: var(--accent-color)" data-lang-key="heroTitleAccent"></span>
-        <span data-lang-key="heroTitle2"></span>
-      </h1>
-      <p data-lang-key="heroDescription"></p>
-      <a href="#contributions" class="btn" data-lang-key="heroButton"></a>
-      <a href="https://drive.google.com/file/d/15ofOyJp8gdxsGdWWynx7_7s_84plUvN5/view?usp=sharing" target="_blank"
-        class="btn" data-lang-key="heroCVButton"></a>
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://yourwebsite.com/" />
+    <meta
+      property="twitter:title"
+      content="Zaenal Nurrizqy - IT Support Specialist | Technical Support & System Administrator"
+    />
+    <meta
+      property="twitter:description"
+      content="Professional IT Support Specialist with expertise in technical troubleshooting, system administration, network support, and backend development."
+    />
+    <meta
+      property="twitter:image"
+      content="https://yourwebsite.com/src/img/Image 2025-05-28 at 15.40.21_dce3a2e8.jpg"
+    />
 
-    </div>
-  </section>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-  <section id="about" class="container">
-    <div class="about-content">
-      <div>
-        <h2 data-lang-key="aboutTitle"></h2>
-        <p data-lang-key="aboutP1"></p>
-        <p style="margin-top: 1rem" data-lang-key="aboutP2"></p>
-        <div class="skills-section">
-          <div class="skills-category">
-            <h4 data-lang-key="skillsCat1"></h4>
-            <div class="skills">
-              <span class="skill"><i class="fab fa-windows"></i> Windows Server</span>
-              <span class="skill"><i class="fas fa-network-wired"></i> Network
-                Troubleshooting</span>
-              <span class="skill"><i class="fas fa-microchip"></i> Hardware Support</span>
-              <span class="skill"><i class="fas fa-laptop-code"></i> Software Support</span>
-              <span class="skill"><i class="fas fa-database"></i> MySQL Administration</span>
-              <span class="skill"><i class="fas fa-ticket-alt"></i> Ticketing Systems</span>
-              <span class="skill"><i class="fas fa-headset"></i> Customer Service</span>
-              <span class="skill"><i class="fas fa-desktop"></i> System Monitoring</span>
-            </div>
-          </div>
-          <div class="skills-category">
-            <h4 data-lang-key="skillsCat2"></h4>
-            <div class="skills">
-              <span class="skill"><i class="fab fa-laravel"></i> Laravel</span>
-              <span class="skill"><i class="fab fa-php"></i> PHP</span>
-              <span class="skill"><i class="fas fa-cogs"></i> RESTful APIs</span>
-              <span class="skill"><i class="fas fa-database"></i> MySQL</span>
-              <span class="skill"><i class="fab fa-git-alt"></i> Git &
-                <i class="fab fa-github"></i> GitHub</span>
-            </div>
-          </div>
-          <div class="skills-category">
-            <h4 data-lang-key="skillsCat3"></h4>
-            <div class="skills">
-              <span class="skill"><i class="fa-solid fa-code"></i> FiveM (GTA 5 Roleplay)</span>
-            </div>
-          </div>
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#00aaff" />
+
+    <!-- Preconnect for faster font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://site-assets.fontawesome.com" />
+
+    <!-- Preload and async load fonts -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+
+    <!-- Defer FontAwesome with media trick -->
+    <link
+      rel="preload"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"
+      />
+    </noscript>
+    <!-- Critical CSS inline for above-the-fold content -->
+    <style>
+      /* Critical CSS - Above the fold */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --primary-bg: #0a0a0a;
+        --secondary-text: #f5f5f5;
+        --accent-color: #00aaff;
+        --nav-bg: rgba(10, 10, 10, 0.85);
+        --nav-height: 70px;
+      }
+      body {
+        background: var(--primary-bg);
+        color: var(--secondary-text);
+        font-family:
+          "Inter",
+          system-ui,
+          -apple-system,
+          sans-serif;
+        overflow-x: hidden;
+      }
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 clamp(1rem, 2vw, 2.5rem);
+        z-index: 1000;
+        background-color: var(--nav-bg);
+        backdrop-filter: blur(10px);
+        height: var(--nav-height);
+      }
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding-top: calc(var(--nav-height) + 4rem);
+      }
+    </style>
+    <link rel="stylesheet" href="src/style.css" />
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="src/main.js" as="script" />
+    <link
+      rel="preload"
+      href="src/img/Image 2025-05-28 at 15.40.21_dce3a2e8.jpg"
+      as="image"
+      fetchpriority="high"
+    />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Zaenal Nurrizqy",
+        "jobTitle": "IT Support Specialist",
+        "description": "Professional IT Support Specialist with expertise in technical troubleshooting, system administration, network support, and backend development",
+        "url": "https://yourwebsite.com",
+        "image": "https://yourwebsite.com/src/img/Image 2025-05-28 at 15.40.21_dce3a2e8.jpg",
+        "sameAs": [
+          "https://github.com/Rizqy666",
+          "https://www.linkedin.com/in/zaenal-nurrizqy-1195b7103/"
+        ],
+        "knowsAbout": [
+          "IT Support",
+          "Technical Support",
+          "System Administration",
+          "Network Troubleshooting",
+          "Windows Server",
+          "MySQL Administration",
+          "Laravel Development",
+          "PHP Programming",
+          "FiveM Development",
+          "Hardware Support",
+          "Software Support",
+          "Server Monitoring"
+        ],
+        "hasOccupation": {
+          "@type": "Occupation",
+          "name": "IT Support Specialist",
+          "occupationLocation": {
+            "@type": "Country",
+            "name": "Indonesia"
+          },
+          "skills": [
+            "Windows Server Administration",
+            "Network Troubleshooting",
+            "Hardware & Software Support",
+            "MySQL Database Administration",
+            "System Monitoring",
+            "Technical Documentation",
+            "Customer Service",
+            "Laravel Framework",
+            "PHP Development",
+            "RESTful API Development",
+            "FiveM Scripting"
+          ]
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#hero" class="skip-to-main">Skip to main content</a>
+
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <nav>
+      <a href="#hero" class="nav-brand" aria-label="Home - Rizqy Portfolio"
+        >Rizqy<span>();</span></a
+      >
+      <button
+        id="mobile-menu-button"
+        aria-label="Toggle Menu"
+        aria-expanded="false"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="nav-right-controls" id="nav-menu-items">
+        <div class="nav-links">
+          <a
+            href="#hero"
+            class="nav-link"
+            data-lang-key="navHome"
+            data-text-en="HOME"
+            data-text-id="BERANDA"
+            ><span></span
+          ></a>
+          <a
+            href="#about"
+            class="nav-link"
+            data-lang-key="navAbout"
+            data-text-en="ABOUT"
+            data-text-id="TENTANG"
+            ><span></span
+          ></a>
+          <a
+            href="#contributions"
+            class="nav-link"
+            data-lang-key="navExperience"
+            data-text-en="EXPERIENCE"
+            data-text-id="PENGALAMAN"
+            ><span></span
+          ></a>
+          <a
+            href="#contact"
+            class="nav-link"
+            data-lang-key="navContact"
+            data-text-en="CONTACT"
+            data-text-id="KONTAK"
+            ><span></span
+          ></a>
+        </div>
+        <div class="lang-switcher">
+          <button id="lang-en" title="Switch to English">EN</button>
+          <button id="lang-id" class="active" title="Ganti ke Bahasa Indonesia">
+            ID
+          </button>
+        </div>
+        <div class="theme-switcher">
+          <button id="theme-toggle" title="Toggle Dark/Light Mode">🌙</button>
         </div>
       </div>
-      <div>
-        <div style="
-              width: 100%;
-              max-width: 350px;
-              aspect-ratio: 1/1;
-              background: var(--card-bg);
-              border-radius: 10px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              margin: auto;
-              border: 1px solid var(--card-border);
-            ">
-          <img src="src/img/Image 2025-05-28 at 15.40.21_dce3a2e8.jpg" alt="Zaenal Nurrizqy" style="
+    </nav>
+
+    <main id="main-content">
+      <section id="hero" class="hero container">
+        <div class="hero-content">
+          <p class="subtitle">
+            <span data-lang-key="heroGreetingPart1"></span>
+            <span style="color: var(--accent-color); font-weight: bold"
+              >Zaenal Nurrizqy</span
+            >
+            <span data-lang-key="heroGreetingPart2"></span>
+          </p>
+          <div class="typing-container">
+            <span id="typing-effect"></span><span class="typing-cursor"></span>
+          </div>
+          <h1>
+            <span data-lang-key="heroTitle1"></span>
+            <span
+              style="color: var(--accent-color)"
+              data-lang-key="heroTitleAccent"
+            ></span>
+            <span data-lang-key="heroTitle2"></span>
+          </h1>
+          <p data-lang-key="heroDescription"></p>
+          <a href="#contributions" class="btn" data-lang-key="heroButton"></a>
+          <a
+            href="https://drive.google.com/file/d/15ofOyJp8gdxsGdWWynx7_7s_84plUvN5/view?usp=sharing"
+            target="_blank"
+            class="btn"
+            data-lang-key="heroCVButton"
+          ></a>
+        </div>
+      </section>
+
+      <section id="about" class="container">
+        <div class="about-content">
+          <div>
+            <h2 data-lang-key="aboutTitle"></h2>
+            <p data-lang-key="aboutP1"></p>
+            <p style="margin-top: 1rem" data-lang-key="aboutP2"></p>
+            <div class="skills-section">
+              <div class="skills-category">
+                <h4 data-lang-key="skillsCat1"></h4>
+                <div class="skills">
+                  <span class="skill"
+                    ><i class="fab fa-windows"></i> Windows Server</span
+                  >
+                  <span class="skill"
+                    ><i class="fas fa-network-wired"></i> Network
+                    Troubleshooting</span
+                  >
+                  <span class="skill"
+                    ><i class="fas fa-microchip"></i> Hardware Support</span
+                  >
+                  <span class="skill"
+                    ><i class="fas fa-laptop-code"></i> Software Support</span
+                  >
+                  <span class="skill"
+                    ><i class="fas fa-database"></i> MySQL Administration</span
+                  >
+                  <span class="skill"
+                    ><i class="fas fa-ticket-alt"></i> Ticketing Systems</span
+                  >
+                  <span class="skill"
+                    ><i class="fas fa-headset"></i> Customer Service</span
+                  >
+                  <span class="skill"
+                    ><i class="fas fa-desktop"></i> System Monitoring</span
+                  >
+                </div>
+              </div>
+              <div class="skills-category">
+                <h4 data-lang-key="skillsCat2"></h4>
+                <div class="skills">
+                  <span class="skill"
+                    ><i class="fab fa-laravel"></i> Laravel</span
+                  >
+                  <span class="skill"><i class="fab fa-php"></i> PHP</span>
+                  <span class="skill"
+                    ><i class="fas fa-cogs"></i> RESTful APIs</span
+                  >
+                  <span class="skill"
+                    ><i class="fas fa-database"></i> MySQL</span
+                  >
+                  <span class="skill"
+                    ><i class="fab fa-git-alt"></i> Git &
+                    <i class="fab fa-github"></i> GitHub</span
+                  >
+                </div>
+              </div>
+              <div class="skills-category">
+                <h4 data-lang-key="skillsCat3"></h4>
+                <div class="skills">
+                  <span class="skill"
+                    ><i class="fa-solid fa-code"></i> FiveM (GTA 5
+                    Roleplay)</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              style="
                 width: 100%;
-                height: 100%;
-                object-fit: cover;
+                max-width: 350px;
+                aspect-ratio: 1/1;
+                background: var(--card-bg);
                 border-radius: 10px;
-              " />
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: auto;
+                border: 1px solid var(--card-border);
+              "
+            >
+              <img
+                src="src/img/Image 2025-05-28 at 15.40.21_dce3a2e8.jpg"
+                alt="Zaenal Nurrizqy - IT Support Specialist"
+                width="350"
+                height="350"
+                loading="lazy"
+                decoding="async"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  border-radius: 10px;
+                "
+              />
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <section id="contributions" class="container">
-    <h2 data-lang-key="contribTitle"></h2>
-    <div class="contributions-grid">
-      <div class="contribution-card">
-        <span class="card-type" data-lang-key="contribTypeIT"></span>
-        <h3 data-lang-key="contrib1Title"></h3>
-        <p data-lang-key="contrib1Desc"></p>
-      </div>
-      <div class="contribution-card">
-        <span class="card-type" data-lang-key="contribTypeIT"></span>
-        <h3 data-lang-key="contrib2Title"></h3>
-        <p data-lang-key="contrib2Desc"></p>
-      </div>
-      <div class="contribution-card">
-        <span class="card-type" data-lang-key="contribTypeBackend"></span>
-        <h3 data-lang-key="contrib3Title"></h3>
-        <p data-lang-key="contrib3Desc"></p>
-        <!-- <span class="details-link" data-lang-key="viewOnGithub"></span> -->
-      </div>
-      <div class="contribution-card">
-        <span class="card-type" data-lang-key="contribTypeBackend"></span>
-        <h3 data-lang-key="contrib4Title"></h3>
-        <p data-lang-key="contrib4Desc"></p>
-        <!-- <span class="details-link" data-lang-key="viewOnGithub"></span> -->
-      </div>
-      <div class="contribution-card">
-        <span class="card-type" data-lang-key="contribTypeBackend"></span>
-        <h3 data-lang-key="contrib5Title"></h3>
-        <p data-lang-key="contrib5Desc"></p>
-        <!-- <span class="details-link" data-lang-key="viewOnGithub"></span> -->
-      </div>
-      <div class="contribution-card">
-        <span class="card-type" data-lang-key="contribTypeGames"></span>
-        <h3 data-lang-key="contrib6Title"></h3>
-        <p data-lang-key="contrib6Desc"></p>
-        <!-- <span class="details-link" data-lang-key="viewOnGithub"></span> -->
-      </div>
-    </div>
-  </section>
+      <section id="contributions" class="container">
+        <h2 data-lang-key="contribTitle"></h2>
+        <div class="contributions-grid">
+          <div class="contribution-card">
+            <span class="card-type" data-lang-key="contribTypeIT"></span>
+            <h3 data-lang-key="contrib1Title"></h3>
+            <p data-lang-key="contrib1Desc"></p>
+          </div>
+          <div class="contribution-card">
+            <span class="card-type" data-lang-key="contribTypeIT"></span>
+            <h3 data-lang-key="contrib2Title"></h3>
+            <p data-lang-key="contrib2Desc"></p>
+          </div>
+          <div class="contribution-card">
+            <span class="card-type" data-lang-key="contribTypeBackend"></span>
+            <h3 data-lang-key="contrib3Title"></h3>
+            <p data-lang-key="contrib3Desc"></p>
+            <!-- <span class="details-link" data-lang-key="viewOnGithub"></span> -->
+          </div>
+          <div class="contribution-card">
+            <span class="card-type" data-lang-key="contribTypeBackend"></span>
+            <h3 data-lang-key="contrib4Title"></h3>
+            <p data-lang-key="contrib4Desc"></p>
+            <!-- <span class="details-link" data-lang-key="viewOnGithub"></span> -->
+          </div>
+          <div class="contribution-card">
+            <span class="card-type" data-lang-key="contribTypeBackend"></span>
+            <h3 data-lang-key="contrib5Title"></h3>
+            <p data-lang-key="contrib5Desc"></p>
+            <!-- <span class="details-link" data-lang-key="viewOnGithub"></span> -->
+          </div>
+          <div class="contribution-card">
+            <span class="card-type" data-lang-key="contribTypeGames"></span>
+            <h3 data-lang-key="contrib6Title"></h3>
+            <p data-lang-key="contrib6Desc"></p>
+            <!-- <span class="details-link" data-lang-key="viewOnGithub"></span> -->
+          </div>
+        </div>
+      </section>
 
-  <section id="contact" class="container">
-    <h2 data-lang-key="contactTitle"></h2>
-    <p class="contact-intro" data-lang-key="contactIntro"></p>
-    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value="f1849ad5-3c5d-4179-bffd-8513fb1b14ab" />
-      <div class="input-group">
-        <input type="text" id="name" name="name" placeholder=" " required />
-        <label for="name" data-lang-key="formName"></label>
-      </div>
-      <div class="input-group">
-        <input type="email" id="email" name="email" placeholder=" " required />
-        <label for="email" data-lang-key="formEmail"></label>
-      </div>
-      <div class="input-group">
-        <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
-        <label for="message" data-lang-key="formMessage"></label>
-      </div>
-      <a href="https://web3forms.com/success" type="submit" class="btn"
-        style="display: block; width: 100%; text-align: center;" data-lang-key="formButton"></a>
-    </form>
-  </section>
+      <section id="contact" class="container">
+        <h2 data-lang-key="contactTitle"></h2>
+        <p class="contact-intro" data-lang-key="contactIntro"></p>
+        <form
+          class="contact-form"
+          id="contactForm"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="f1849ad5-3c5d-4179-bffd-8513fb1b14ab"
+          />
+          <div class="input-group">
+            <input type="text" id="name" name="name" placeholder=" " required />
+            <label for="name" data-lang-key="formName"></label>
+            <span class="error-message" id="nameError"></span>
+          </div>
+          <div class="input-group">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder=" "
+              required
+            />
+            <label for="email" data-lang-key="formEmail"></label>
+            <span class="error-message" id="emailError"></span>
+          </div>
+          <div class="input-group">
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder=" "
+              required
+            ></textarea>
+            <label for="message" data-lang-key="formMessage"></label>
+            <span class="error-message" id="messageError"></span>
+          </div>
+          <button
+            type="submit"
+            class="btn"
+            data-lang-key="formButton"
+            aria-label="Send contact message"
+          ></button>
+        </form>
+      </section>
 
-  <footer class="container">
-    <p data-lang-key="footerText"></p>
-    <div class="social-links">
-      <a href="https://github.com/Rizqy666" target="_blank" class="social-link" aria-label="GitHub">
-        <svg viewBox="0 0 16 16">
-          <path fill-rule="evenodd"
-            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
-          </path>
-        </svg>
-      </a>
-      <a href="https://www.linkedin.com/in/zaenal-nurrizqy-1195b7103/" target="_blank" class="social-link"
-        aria-label="LinkedIn">
-        <svg viewBox="0 0 24 24">
-          <path
-            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
-          </path>
-        </svg>
-      </a>
-    </div>
-  </footer>
+      <footer class="container">
+        <p data-lang-key="footerText"></p>
+        <div class="social-links">
+          <a
+            href="https://github.com/Rizqy666"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            aria-label="Visit GitHub Profile"
+          >
+            <svg
+              viewBox="0 0 16 16"
+              aria-hidden="true"
+              focusable="false"
+              role="img"
+            >
+              <title>GitHub</title>
+              <path
+                fill-rule="evenodd"
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/zaenal-nurrizqy-1195b7103/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            aria-label="Visit LinkedIn Profile"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+              role="img"
+            >
+              <title>LinkedIn</title>
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </footer>
+    </main>
 
-  <script src="src/main.js"></script>
-</body>
+    <!-- Defer JavaScript for better performance -->
+    <script src="src/main.js" defer></script>
 
+    <!-- Font loading optimization -->
+    <script>
+      // Optimize font loading
+      if ("fonts" in document) {
+        Promise.all([
+          document.fonts.load("400 1em Inter"),
+          document.fonts.load("700 1em Inter"),
+          document.fonts.load("800 1em Inter"),
+        ]).then(() => {
+          document.documentElement.classList.add("fonts-loaded");
+        });
+      }
+
+      // Performance monitoring (optional - remove in production if not needed)
+      if ("PerformanceObserver" in window) {
+        // Monitor Largest Contentful Paint (LCP)
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          console.log("LCP:", lastEntry.renderTime || lastEntry.loadTime);
+        });
+        lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] });
+
+        // Monitor First Input Delay (FID)
+        const fidObserver = new PerformanceObserver((list) => {
+          list.getEntries().forEach((entry) => {
+            console.log("FID:", entry.processingStart - entry.startTime);
+          });
+        });
+        fidObserver.observe({ entryTypes: ["first-input"] });
+
+        // Monitor Cumulative Layout Shift (CLS)
+        let clsScore = 0;
+        const clsObserver = new PerformanceObserver((list) => {
+          list.getEntries().forEach((entry) => {
+            if (!entry.hadRecentInput) {
+              clsScore += entry.value;
+              console.log("CLS:", clsScore);
+            }
+          });
+        });
+        clsObserver.observe({ entryTypes: ["layout-shift"] });
+      }
+    </script>
+  </body>
 </html>
